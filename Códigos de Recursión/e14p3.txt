@@ -1,0 +1,81 @@
+
+
+Calcule la complejidad del siguiente algoritmo:
+
+Integer j;
+j=1;       //c1
+while j<N  //c2
+	j=j*b  // c3
+end
+
+
+
+Dado que b es constante y
+a) N es constante
+b) N depende de datos del programa
+
+
+La respuesta a si tenemos en cuenta que N es constante entonces el algoritmo no depende en ningun lado de los datos de entrada y por la tanto su complejidad es O(1)
+
+La respuesta b el N si depende de los datos de entrada por lo que se debe calcular la complejidad
+
+Para calcular la funcion F(n) primero debemos ver cuantas veces se ejecuta c1 c2 y c3, c1 se ejecuta una sola vez, mientras c2 y c3 hay que calcularlo:
+
+Asumimos que N es potencia de b (para facilitar un poco las cosas)
+
+Para ejemplificar supongamos que b es igual a 2, como sabemos que j empieza en 1 hagamos un seguimiento de los valores que va tomando j
+
+Primera iteracion j=1
+Segunda iteracion j=2
+Tercera Iteracion j=4
+Cuarta  iteracion j=8
+.
+.
+.
+k-esima iteracion j=2^k
+
+
+Si tenemos que N es potencia de 2 quiere decir que N=2^k 
+Si tenemos N= 2^k sabemos que el la constante c3 se ejecuta k veces debido a que el ciclo terminara en la k-esima iteracion
+Despejemos K para saber cuantas veces se ejecuta el ciclo dependiendo del valor N
+
+N=2^k
+log2(N)=k  aplicamos la inversa de la de 2^() que es log2() (logaritmo en base 2 de algo)
+
+Con esto tenemos que la constante c3 se ejecuta log2(N) veces
+
+Si generalizamos este proceso para cualquier b constante tenemos que 
+
+N=b^k
+al despejar la inversa de b^() es logb() (logaritmo en base b de algo)
+
+logb(N)=k
+
+
+Dado esto podemos tener la funcion de tiempo F(n)
+c1 se ejecuta una vez
+c2 se ejecuta logb(N)+1
+c3 se ejecuta logb(N);
+
+F(N)=c1+c2*(logb(N) +1)+ c3*(logb(N))  //Escribimos la funcion de tiempo del algoritmo
+F(N)=c1+c2*logb(N)+c2+c3*logb(N)       // Aplicamos Distributiva
+c1+c2=c4                               // Agrupamos las constantes
+F(N)= c4+logb(N)*(c3+c2)               // Factor comun
+c2+c3=c5                               // Agrupamos las constantes
+F(N)=c4+logb(N)*c5                     // Escribimos
+O(F(N))=O(c4+logb(N)*c5)               // Aplicamos la funcion O()
+O(F(N))=O(logb(N)*c5)                  // Por Regla de suma
+O(F(N))=O(logb(N))                     // Por regla del producto
+O(logb(N))                             // Complejidad final
+
+
+
+
+
+
+
+
+
+
+
+

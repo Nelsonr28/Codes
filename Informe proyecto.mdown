@@ -1,0 +1,35 @@
+# Informe proyecto
+
+**Las listas del Dr Brief**
+
+*El analisis del proyecto de la lista del Dr. Brief fue un poco compleja, realice una lista doblemente enlazada para facilitar los metodos de los apuntadores, ya que me pide usar una Forma_C que es cola, Forma_D que es Dipolo, ya que ellos usan apuntadores uno a primero y otro a ultimo, cree tambien una clase lista aparte para los poderes i­ésimo (sublista de poderes), que en esa campo tendrán los atributos string que representa el nombre del poder y un entero que representa el daño.
+
+Uso una clase lista doblemente enlazada y dentro de ella se usa otra clase que sera mi clase nodo (nodoGuerreros) dentro de la clase lista, llamo una accion para insertar en la lista doblemente enlazada (LDE).
+
+Creo varias acciones y funciones para hacer lo que es las formas.
+
+1. Forma_P: creo varias acciones una para insertar en la pila y u otra para extraer en la pila.
+
+2.Forma_C: creo varias acciones una para insertar en la cola que vale destacar que inserta por el
+
+ultimo y u otra para extraer en la cola que extrae desde el primero.
+
+3. Forma_D: que solo se inserta desde la primera posicion o se inserta desde la ultima posicion los
+
+guerreros y tambien se extrae desde la primera posicion y del ultima posicion de los guerreros
+
+todos estos de los extremos de la lista.
+
+3. Forma_B: esta forma tiene 3 acciones: 1­ que te dan la lista desordenadas y la ordeno de forma
+
+eficiente, u otra que ya viene ordenada y haces la insercion ordenadamente , u otra que busca y
+
+extrae de forma ordenada.
+
+Llamo en el int main() las funciones que realice, use un for () para la insercion de los Guerreros Z,
+
+y otro for para los poder i­esimo, y voy imprimiendo cada Guerrero con sus atributos, hago otro
+
+Mega for() que contiene la cantida de Formas a realizar, dentro de ellas una selecion , para indicar
+
+si es insertar hace la inserccion si es extraer extrae, depende de que caso entras.*
